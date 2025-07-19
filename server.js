@@ -57,12 +57,25 @@ app.use('/api/participate', participateRoutes);
 if (NODE_ENV === 'production') {
   app.get('*', (req, res) => {
     const publicPath = path.join(__dirname, 'public');
-    res.sendFile(path.join(publicPath, 'index.html'), (err) => {
-      if (err) {
-        console.error('Error sending file:', err);
-        res.status(500).send('Error loading application');
-      }
-    });
+    const indexPath = path.join(publicPath, 'index.html');
+    
+    // Check if index.html exists
+    if (require('fs').existsSync(indexPath)) {
+      res.sendFile(indexPath, (err) => {
+        if (err) {
+          console.error('Error sending file:', err);
+          res.status(500).send('Error loading application');
+        }
+      });
+    } else {
+      console.log('index.html not found, serving API info');
+      res.json({
+        message: 'Mandava Science Foundation API',
+        status: 'running',
+        api: '/api/participate',
+        note: 'Frontend build not found. Please check build process.'
+      });
+    }
   });
 }
 
