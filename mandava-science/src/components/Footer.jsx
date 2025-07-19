@@ -26,7 +26,7 @@ const partnerLogos = [
   { src: "https://cs.christuniversity.in/softex/resources/img/christ_university_Black.png"},
   { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-IlQCoM8OqVnfqKYf7MCV61nzJgTabEleA&s" },
   { src: "https://dsca.edu.in/wp-content/uploads/2025/01/DS-logo-01-01.png", alt: "Dayananda Sagar Institutions" },
-  { src: "https://www.admissionindia.net/uploads/colleges/386/RV-University.png" },
+  { src: "/images/Projects/RV.png" },
   { src: "https://clubrunner.blob.core.windows.net/00000002427/PhotoAlbum/branding/Mark-of-Excellence-4992.png", alt: "Rotary International" },
   { src: "https://i.pinimg.com/736x/30/8b/39/308b39166ab85b227ea981e4073083a6.jpg"},
   { src: "https://www.pngkey.com/png/full/261-2612709_political-biased-to-transparent-the-hindu-logo.png" },
