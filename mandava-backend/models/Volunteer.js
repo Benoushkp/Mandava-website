@@ -1,0 +1,52 @@
+const mongoose = require('mongoose');
+
+const VolunteerSchema = new mongoose.Schema({
+  title: String,
+  firstName: String,
+  middleName: String,
+  lastName: String,
+  gender: String,
+  dob: String,
+  age: String,
+  email: String,
+  primaryContact: String,
+  altContact: String,
+  currentAddress: String,
+  permSame: String,
+  permanentAddress: String,
+  employmentStatus: String,
+  qualification: String,
+  program: String,
+  gradYear: String,
+  collegeName: String,
+  collegeAddress: String,
+  currentYear: String,
+  hobbies: String,
+  companyName: String,
+  companyBusiness: String,
+  companyAddress: String,
+  designation: String,
+  yearsExperience: String,
+  businessName: String,
+  businessNature: String,
+  businessAddress: String,
+  yearsInBusiness: String,
+  retiredRole: String,
+  retiredCompany: String,
+  retiredNature: String,
+  retiredAddress: String,
+  retiredYear: String,
+  internshipState: String,
+  internshipCity: String,
+  internshipPin: String,
+  internshipStart: String,
+  socialJustice: String,
+  economicRespect: String,
+  nationBuilding: String,
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+module.exports = mongoose.model('Volunteer', VolunteerSchema);
