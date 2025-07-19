@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: mandava-science-foundation
+    env: node
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        value: mongodb+srv://mandava_user:Mandava2024!@mandavasciencefoundatio.9s1w5uq.mongodb.net/mandava?retryWrites=true&w=majority&appName=MandavaScienceFoundation
+      - key: PORT
+        value: 3001 
