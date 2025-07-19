@@ -46,8 +46,17 @@ if (NODE_ENV === 'production') {
   const publicPath = path.join(__dirname, 'public');
   console.log('Serving static files from:', publicPath);
   
-  // Serve static files
-  app.use(express.static(publicPath));
+  // Serve static files with cache busting
+  app.use(express.static(publicPath, {
+    maxAge: 0, // Disable caching for debugging
+    etag: false
+  }));
+  
+  // Add specific logging for image requests
+  app.use('/images', (req, res, next) => {
+    console.log(`Image request: ${req.method} ${req.url}`);
+    next();
+  });
 }
 
 // API routes
@@ -73,7 +82,8 @@ if (NODE_ENV === 'production') {
         message: 'Mandava Science Foundation API',
         status: 'running',
         api: '/api/participate',
-        note: 'Frontend build not found. Please check build process.'
+        note: 'Frontend build not found. Please check build process.',
+        version: '1.0.1' // Force new deployment
       });
     }
   });
@@ -81,4 +91,5 @@ if (NODE_ENV === 'production') {
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT} in ${NODE_ENV} mode`);
+  console.log(`Version: 1.0.1 - Updated with new images`); // Force new deployment
 });

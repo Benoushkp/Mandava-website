@@ -43,7 +43,7 @@ const galleryData = {
   },
   pressrelease: {
     title: "Media and Press Release",
-    images: ["/images/Articles/1.jpeg","/images/Articles/2.jpeg"]
+    images: ["/images/Articles/1.jpeg?v=1.0.1","/images/Articles/2.jpeg?v=1.0.1"]
   }
 };
 
