@@ -2,6 +2,13 @@
 
 echo "🚀 Building Mandava Science Foundation for Production..."
 
+# Check if public directory already exists with files
+if [ -f "public/index.html" ]; then
+    echo "✅ Frontend build already exists in public/"
+    echo "🚀 Ready for deployment!"
+    exit 0
+fi
+
 # Install frontend dependencies
 echo "📦 Installing frontend dependencies..."
 cd mandava-science

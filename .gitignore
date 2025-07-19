@@ -14,7 +14,7 @@ yarn-error.log*
 # Build outputs
 dist/
 build/
-public/
+# public/  # Commented out to include pre-built frontend
 
 # IDE files
 .vscode/
