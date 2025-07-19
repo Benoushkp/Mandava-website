@@ -1,0 +1,157 @@
+.donate-container {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9fbfc;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    color: #222;
+  }
+  
+  .donate-hero {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 2.5rem;
+  }
+  
+  .donate-hero h1 {
+    font-size: 2.5rem;
+    color: #FF7F11;
+    margin-bottom: 1rem;
+  }
+  
+  .donate-hero p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Form */
+  .donation-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: fadeIn 0.7s ease;
+  }
+  
+  .donation-form input {
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .submit-btn {
+    background: #FF7F11;
+    color: white;
+    padding: 0.9rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background: #FFA640;
+  }
+  
+  .error-msg {
+    font-size: 0.85rem;
+    color: red;
+    margin-top: -0.5rem;
+  }
+  
+  /* QR */
+  .qr-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .qr-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: popIn 0.5s ease;
+  }
+  
+  .qr-image {
+    width: 250px;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255,126,17,0.3);
+  }
+  
+  .upi-id {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+  
+  .upi-id span {
+    font-weight: bold;
+    color: #FF7F11;
+  }
+  
+  .confirm-btn {
+    margin-top: 1.5rem;
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .confirm-btn:hover {
+    background: #218838;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  /* Confirmation message after email sent */
+.thankyou-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  
+  .thankyou-box {
+    background: #ffffff;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease;
+    max-width: 500px;
+  }
+  
+  .thankyou-box h2 {
+    color: #28a745;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .thankyou-box p {
+    color: #444;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

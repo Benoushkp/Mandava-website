@@ -1,0 +1,241 @@
+/* Footer Container */
+.footer {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 3rem 2rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer Grid Layout */
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  gap: 0.4rem;
+}
+
+.footer-block h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFA640;
+  margin-bottom: 0.5rem;
+}
+
+.footer-block a {
+  color: #666666;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-block a:hover {
+  color: #71C4EF;
+}
+
+/* Footer Bottom Copyright */
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666666;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  font-size: 1.2rem;
+  color: #666666;
+  background-color: #f0f0f0;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+  background-color: #FFA640;
+}
+
+/* Partner Section */
+.footer-partners {
+  padding: 2.5rem 0 1.5rem;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.footer-partners h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FF7F11;
+  margin-bottom: 1.2rem;
+}
+
+/* Marquee Scroll */
+.partner-marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-partners 60s linear infinite;
+}
+
+/* Partner Logo with Name */
+.partner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem;
+  min-width: 120px;
+  text-align: center;
+}
+
+.partner-logo {
+  height: 50px;
+  width: auto;
+  max-height: 60px;
+  transition: transform 0.3s ease;
+  margin-bottom: 0.3rem;
+}
+
+.partner-logo:hover {
+  transform: scale(1.08);
+}
+
+.partner-name {
+  font-size: 0.75rem;
+  color: #444;
+  max-width: 100px;
+  text-align: center;
+  white-space: normal;
+  line-height: 1.2;
+}
+
+/* Seamless loop animation */
+@keyframes scroll-partners {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 2rem 1.2rem;
+  }
+
+  .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    column-gap: 1rem;   /* space between columns */
+    row-gap: 1.5rem;    /* space between rows */
+    width: 100%;
+  }
+
+  .footer-block {
+    min-width: 0;       /* Important: prevents overflow */
+    margin: 0;          /* remove any margin */
+    padding: 0;         /* remove any padding */
+  }
+
+  .footer-block h4 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .footer-block a {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    line-height: 1.4;
+    display: block; /* ensure they stack nicely */
+  }
+
+  .partner-marquee {
+    height: 80px;
+  }
+
+  .partner-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .partner-logo {
+    height: 30px;
+    width: auto;
+  }
+
+  .social-icons a {
+    font-size: 1.1rem;
+    margin: 0 6px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 15px;
+  }
+}
+
+.active-footer-link {
+  color: var(--primary);
+  font-weight: 600;
+  border-bottom: 1.5px solid #FFA640; 
+  width:fit-content;
+  padding-bottom: 2px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.footer-credit {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+  color: #999;
+  font-style: italic;
+  animation: fadeCycle 6s infinite ease-in-out;
+  opacity: 0.9;
+}
+
+.footer-credit a {
+  color: #FF7F11;
+  font-weight: 600;
+  margin-left: 6px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-credit a:hover {
+  color: #FFA640;
+  text-decoration: underline;
+}
+
+/* Keyframes for fade in / fade out loop */
+@keyframes fadeCycle {
+  0%, 100% { opacity: 0; }
+  20%, 80% { opacity: 1; }
+}

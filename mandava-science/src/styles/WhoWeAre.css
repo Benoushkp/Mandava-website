@@ -1,0 +1,145 @@
+.who-container {
+    font-family: 'Inter', sans-serif;
+    color: #222;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  /* Hero Banner */
+  .hero-banner {
+    background: linear-gradient(to right, #FF7F11, #FFA640);
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+  }
+  
+  .who-logo {
+    width: 190px;
+    margin-top: 2.5rem;
+  }
+  
+  .hero-banner h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0rem;
+    margin-top: -0.4rem;
+  }
+  
+  .hero-banner p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: -2.5rem;
+  }
+  
+  /* Section Background with Overlay */
+  .full-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 6rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .section-overlay {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 3rem 2rem;
+    max-width: 850px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-overlay h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    color: #FF7F11;
+  }
+  
+  .section-overlay p,
+  .section-overlay ul {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.7;
+  }
+  
+  .section-overlay ul {
+    text-align: left;
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-top: 1.2rem;
+  }
+  
+  /* Founder Section */
+  .founder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 6rem 2rem;
+    background-color: #f9f9f9;
+    gap: 2rem;
+  }
+  
+  .founder-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  }
+  
+  .founder-text {
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .founder-text h2 {
+    font-size: 2rem;
+    color: #FF7F11;
+    margin-bottom: 1rem;
+  }
+  
+  .founder-text p {
+    font-style: italic;
+    color: #444;
+  }
+  
+  .founder-text strong {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-banner h1 {
+      font-size: 2.3rem;
+    }
+  
+    .section-overlay h2 {
+      font-size: 1.6rem;
+    }
+  
+    .founder {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .founder-text {
+      text-align: center;
+    }
+  
+    .who-logo {
+      width: 90px;
+    }
+  
+    .section-overlay {
+      padding: 2rem 1rem;
+    }
+  }
+  

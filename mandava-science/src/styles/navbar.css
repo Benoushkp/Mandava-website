@@ -1,0 +1,232 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  height: 80px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  border-bottom: 3px solid #FFA640;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand Section */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 45px;
+  margin-right: 10px;
+  filter: drop-shadow(0 0 6px rgba(255, 126, 17, 0.3));
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 0.8px;
+}
+
+/* Menu Links */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  padding: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #FFA640;
+}
+
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #FFA640;
+  transition: width 0.3s ease;
+}
+
+.navbar-menu a:hover::after {
+  width: 100%;
+}
+
+/* Donate CTA */
+.donate-btn {
+  background-color: #FF7F11;
+  color: #fff !important;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  width: 60px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 126, 17, 0.2);
+}
+
+.donate-btn:hover {
+  background-color: #FFA640;
+  box-shadow: 0 6px 16px rgba(255, 166, 64, 0.4);
+  color: #000 !important;
+}
+
+/* Active Link Styling */
+.navbar-menu a.active {
+  color: #FFA640;
+}
+
+.navbar-menu a.active::after {
+  width: 100%;
+  background-color: #FFA640;
+}
+
+.donate-btn.active {
+  background-color: #FFA640;
+  color: #000 !important;
+  box-shadow: 0 6px 16px rgba(255, 166, 64, 0.4);
+}
+
+/* Hide hamburger on desktop */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+}
+
+.navbar-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #FFA640;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when open */
+.navbar-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .navbar {
+    height: 60px;
+    padding: 0.5rem 0;
+  }
+
+  .navbar-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    position: relative;
+  }
+
+  .navbar-brand {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-logo {
+    height: 35px;
+  }
+
+  .navbar-title {
+    font-size: 1.0rem;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #ffffff 0%, #fff5e6 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    width: 240px;
+    padding: 1.5rem;
+    display: none;
+    z-index: 1000;
+    transform: translateX(-50%) translateY(-20px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    border: 1px solid #FFA640;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+
+  .navbar-menu a {
+    padding: 0.8rem 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .navbar-menu a:hover,
+  .navbar-menu a.active {
+    color: #FFA640;
+    transform: translateX(5px);
+  }
+
+  .navbar-menu a:last-child {
+    border-bottom: none;
+  }
+
+  /* Adjust donate button for mobile */
+  .donate-btn {
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  /* Show hamburger */
+  .navbar-toggle {
+    display: flex;
+  }
+}

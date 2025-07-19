@@ -1,0 +1,289 @@
+:root {
+  --primary: #FF7F11;
+  --primary-light: #FFA640;
+  --text-dark: #222;
+  --bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.participate-wrapper {
+  background: linear-gradient(to bottom right, #fefefe, #f5f5f5);
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 3rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px var(--shadow);
+  width: 100%;
+  max-width: 800px;
+  animation: fadeInUp 0.6s ease;
+  border: 1px solid #ddd;
+}
+
+.form-card h1 {
+  font-size: 2rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+.form-card p {
+  color: #555;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.form-section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 1.5rem 2.5rem; /* Increased bottom padding */
+  border-radius: 10px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.form-section legend {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+  background: #fafafa;
+  width: auto;
+}
+
+/* Form group and floating label */
+.form-group {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  font-size: 1rem;
+  padding: 1.1rem 0.8rem;
+  background: transparent;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  color: var(--text-dark);
+  transition: border-color 0.3s ease, box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  padding: 1.1rem 0.8rem;
+}
+
+.form-group select {
+  padding: 1.1rem 0.8rem;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="%23FF7F11" d="M7 10l5 5 5-5z"/></svg>') no-repeat right 0.8rem center;
+  background-size: 12px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(255, 126, 17, 0.15);
+}
+
+.form-group label {
+  position: absolute;
+  top: 1.1rem;
+  left: 0.9rem;
+  font-size: 1rem;
+  color: #888;
+  background: #fafafa;
+  padding: 0 5px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label,
+.form-group select:focus + label,
+.form-group select:valid + label {
+  top: -0.7rem;
+  left: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--primary);
+}
+
+/* File input styling */
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 1.1rem 0.8rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.form-group input[type="file"]:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(255, 126, 17, 0.15);
+  outline: none;
+}
+
+.form-group input[type="file"] + label {
+  top: -0.7rem;
+  left: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--primary);
+  background: #fafafa;
+}
+
+/* Checkbox styling */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 3rem; /* Increased significantly to prevent overlap */
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+.checkbox-label input {
+  margin-right: 0.5rem;
+  accent-color: var(--primary);
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* Submit wrapper */
+.submit-wrapper {
+  width: 100%;
+  padding-top: 2rem; /* Additional spacing above submit button */
+}
+
+/* Submit button */
+.submit-button {
+  display: block; /* Ensure block-level to respect margins */
+  width: 100%;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.85rem 1rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(255, 126, 17, 0.2);
+  margin-top: 0; /* Removed explicit margin-top, handled by .submit-wrapper */
+}
+
+.submit-button:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 126, 17, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .participate-wrapper {
+    padding: 2rem 0.5rem;
+  }
+
+  .form-card {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+
+  .form-card h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-section {
+    padding: 1rem 1rem 2rem; /* Adjusted bottom padding for mobile */
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 0.9rem;
+    padding: 0.9rem 0.6rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    top: 0.9rem;
+    left: 0.7rem;
+  }
+
+  .form-group input:focus + label,
+  .form-group input:not(:placeholder-shown) + label,
+  .form-group textarea:focus + label,
+  .form-group textarea:not(:placeholder-shown) + label,
+  .form-group select:focus + label,
+  .form-group select:valid + label {
+    top: -0.6rem;
+    left: 0.6rem;
+    font-size: 0.65rem;
+  }
+
+  .form-group input[type="file"] {
+    padding: 0.9rem 0.6rem;
+  }
+
+  .checkbox-label {
+    margin-bottom: 2rem; /* Adjusted for mobile */
+  }
+
+  .submit-wrapper {
+    padding-top: 3.5rem; /* Adjusted for mobile */
+  }
+
+  .submit-button {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+.form-message {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--primary);
+  animation: fadeInUp 0.4s ease;
+}

@@ -1,0 +1,262 @@
+:root {
+  --primary: #FF7F11;
+  --text-dark: #222;
+  --bg-light: #f9f9f9;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+.beliefs-page {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Hero Banner */
+.beliefs-banner {
+  background-size: cover;
+  background-position: center;
+  padding: 10rem 1.5rem; /* Reduced padding for mobile */
+  position: relative;
+  text-align: center;
+}
+
+.beliefs-banner .overlay {
+  background: rgba(255, 255, 255, 0.464);
+  padding: 3rem 1.5rem; /* Reduced padding */
+  border-radius: 12px;
+  max-width: 850px;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.beliefs-banner h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.beliefs-banner p {
+  font-size: 1.2rem;
+  color: #444;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* Beliefs List Section */
+.beliefs-content {
+  padding: 4rem 1.5rem; /* Reduced padding */
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
+}
+
+.beliefs-content h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.beliefs-content ul {
+  list-style: disc;
+  padding-left: 2rem; /* Reduced from 10.5rem */
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Pillars Section */
+.pillars-section {
+  padding: 4rem 1.5rem; /* Reduced padding */
+  text-align: center;
+  background: var(--bg-light);
+}
+
+.pillars-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem; /* Slightly reduced */
+  color: var(--text-dark);
+}
+
+.pillars-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem; /* Reduced gap for mobile */
+}
+
+.pillar-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 1.5rem; /* Reduced padding */
+  width: 90%; /* Responsive width */
+  max-width: 300px;
+  box-shadow: 0 8px 24px var(--shadow);
+  text-align: left;
+  transition: transform 0.3s ease;
+  border-top: 4px solid var(--primary);
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+}
+
+.pillar-card h3 {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.pillar-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Quote Section */
+.beliefs-quote {
+  padding: 3rem 1.5rem; /* Reduced padding */
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.beliefs-quote blockquote {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #333;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.beliefs-quote cite {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .beliefs-banner {
+    padding: 8rem 1rem; /* Further reduced */
+  }
+
+  .beliefs-banner .overlay {
+    padding: 2rem 1rem;
+  }
+
+  .beliefs-banner h1 {
+    font-size: 2rem;
+  }
+
+  .beliefs-banner p {
+    font-size: 1rem;
+  }
+
+  .beliefs-content {
+    padding: 3rem 1rem;
+  }
+
+  .beliefs-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .beliefs-content ul {
+    padding-left: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .pillars-section {
+    padding: 3rem 1rem;
+  }
+
+  .pillars-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .pillars-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .pillar-card {
+    width: 95%;
+    max-width: 280px;
+    padding: 1.25rem;
+  }
+
+  .beliefs-quote {
+    padding: 2rem 1rem;
+  }
+
+  .beliefs-quote blockquote {
+    font-size: 1.2rem;
+  }
+
+  .beliefs-quote cite {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .beliefs-banner {
+    padding: 6rem 0.75rem;
+  }
+
+  .beliefs-banner .overlay {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .beliefs-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .beliefs-banner p {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+
+  .beliefs-content {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .beliefs-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .beliefs-content ul {
+    padding-left: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .pillars-section {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .pillars-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .pillar-card {
+    width: 100%;
+    max-width: 260px;
+    padding: 1rem;
+  }
+
+  .beliefs-quote {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .beliefs-quote blockquote {
+    font-size: 1rem;
+  }
+
+  .beliefs-quote cite {
+    font-size: 0.85rem;
+  }
+}
